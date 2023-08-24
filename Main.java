@@ -45,6 +45,10 @@ class ShoppingCart {
                 }
                 continue;
             }
+
+            if (choice == 3) {
+                displayItems();
+            }
         }
 
     }
@@ -68,5 +72,14 @@ class ShoppingCart {
             }
         }
         return "Item was not found!";
+    }
+
+    public void displayItems() {
+        System.out.println("* * * * * * * * * *");
+        System.out.println("Items in shopping card");
+        for (int i = 0; i < shoppingCart.size(); i++) {
+            System.out.printf("%d - %s", i + 1, shoppingCart.get(i));
+        }
+        System.out.println("* * * * * * * * * * ");
     }
 }
