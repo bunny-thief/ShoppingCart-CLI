@@ -29,11 +29,21 @@ class ShoppingCart {
             System.out.println("Select an opton from the menu:");
 
             int choice = Integer.valueOf(scanner.nextLine());
-            
+
+            if (choice == 1) {
+                addItemToList();
+            }
         }
 
     }
 
+    public void addItemToList() {
+        System.out.println("Enter item name:");
+        String newItem = scanner.nextLine();
 
+        shoppingCart.add(newItem);
+
+        System.out.printf("%s was added to the shopping card.", newItem);
+    }
 
 }
