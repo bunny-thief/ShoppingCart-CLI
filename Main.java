@@ -30,7 +30,7 @@ class ShoppingCart {
             System.out.println("3 - Display items");
             System.out.println("4 - Exit\n");
 
-            System.out.println("Select an opton from the menu:");
+            System.out.println("Select an option from the menu (1-4):");
 
             int choice = Integer.valueOf(scanner.nextLine());
 
@@ -40,12 +40,17 @@ class ShoppingCart {
             }
 
             if (choice == 2) {
-                String removed = removeItemFromList();
+                if (!shoppingCart.isEmpty()) {
 
-                if (removed.equals("Item was not found!")) {
-                    System.out.println(removed);
+                    String removed = removeItemFromList();
+
+                    if (removed.equals("Item was not found!")) {
+                        System.out.println(removed + "\n");
+                    } else {
+                        System.out.printf("%s was removed from the shopping cart.\n\n", removed);
+                    }
                 } else {
-                    System.out.printf("%s was removed from the shopping cart.\n\n", removed);
+                    System.out.println("Your shopping card is empty.\n");
                 }
                 continue;
             }
@@ -59,7 +64,6 @@ class ShoppingCart {
                 break;
             }
         }
-
     }
 
     public void addItemToList() {
