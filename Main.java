@@ -47,6 +47,10 @@ class ShoppingCart {
                     if (removed.equals("Item was not found!")) {
                         System.out.println(removed + "\n");
                     } else {
+
+                        if (removed.endsWith("s")) {
+                            System.out.printf("%s were removed from the shopping cart.\n\n", removed);
+                        }
                         System.out.printf("%s was removed from the shopping cart.\n\n", removed);
                     }
                 } else {
@@ -72,7 +76,11 @@ class ShoppingCart {
 
         shoppingCart.add(newItem);
 
-        System.out.printf("%s was added to the shopping cart.\n\n", newItem);
+        if (newItem.equals("s")) {
+            System.out.printf("%s were added to the shopping cart.\n\n", newItem);
+        } else {
+            System.out.printf("%s was added to the shopping cart.\n\n", newItem);
+        }
     }
 
     public String removeItemFromList() {
