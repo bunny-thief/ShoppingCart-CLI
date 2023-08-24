@@ -23,6 +23,7 @@ class ShoppingCart {
     }
 
     public void run() {
+        System.out.println("Shopping Cart App\n");
 
         while (true) {
             System.out.println("1 - Add item");
@@ -49,12 +50,13 @@ class ShoppingCart {
                     } else {
 
                         if (removed.endsWith("s")) {
-                            System.out.printf("%s were removed from the shopping cart.\n\n", removed);
+                            System.out.printf("\n%s were removed from the shopping cart.\n\n", removed);
+                        } else {
+                            System.out.printf("\n%s was removed from the shopping cart.\n\n", removed);
                         }
-                        System.out.printf("%s was removed from the shopping cart.\n\n", removed);
                     }
                 } else {
-                    System.out.println("Your shopping card is empty.\n");
+                    System.out.println("\nYour shopping card is empty.\n");
                 }
                 continue;
             }
@@ -77,9 +79,9 @@ class ShoppingCart {
         shoppingCart.add(newItem);
 
         if (newItem.endsWith("s")) {
-            System.out.printf("%s were added to the shopping cart.\n\n", newItem);
+            System.out.printf("\n%s were added to the shopping cart.\n\n", newItem);
         } else {
-            System.out.printf("%s was added to the shopping cart.\n\n", newItem);
+            System.out.printf("\n%s was added to the shopping cart.\n\n", newItem);
         }
     }
 
@@ -92,7 +94,7 @@ class ShoppingCart {
                 return shoppingCart.remove(i);
             }
         }
-        return "Item was not found!";
+        return "\nItem was not found!";
     }
 
     public void displayItems() {
@@ -105,7 +107,7 @@ class ShoppingCart {
             }
             System.out.println("\n* * * * * * * * * * \n");
         } else {
-            System.out.println("Your shopping cart is empty.\n");
+            System.out.println("\nYour shopping cart is empty.\n");
         }
     }
 
