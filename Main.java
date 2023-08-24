@@ -49,6 +49,11 @@ class ShoppingCart {
             if (choice == 3) {
                 displayItems();
             }
+
+            if (choice == 4) {
+                exit();
+                break;
+            }
         }
 
     }
@@ -81,5 +86,10 @@ class ShoppingCart {
             System.out.printf("%d - %s", i + 1, shoppingCart.get(i));
         }
         System.out.println("* * * * * * * * * * ");
+    }
+
+    public void exit() {
+        displayItems();
+        System.out.println("\nThanks for shopping with us!");
     }
 }
