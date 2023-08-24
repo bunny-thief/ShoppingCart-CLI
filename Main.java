@@ -18,4 +18,22 @@ class ShoppingCart {
         this.scanner = scanner;
     }
 
+    public void run() {
+
+        while (true) {
+            System.out.printf("1 - Add item");
+            System.out.println("2 - Remove item");
+            System.out.println("3 - Display items");
+            System.out.println("4 - Exit\n");
+
+            System.out.println("Select an opton from the menu:");
+
+            int choice = Integer.valueOf(scanner.nextLine());
+            
+        }
+
+    }
+
+
+
 }
