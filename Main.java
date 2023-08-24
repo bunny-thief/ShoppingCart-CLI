@@ -76,7 +76,7 @@ class ShoppingCart {
 
         shoppingCart.add(newItem);
 
-        if (newItem.equals("s")) {
+        if (newItem.endsWith("s")) {
             System.out.printf("%s were added to the shopping cart.\n\n", newItem);
         } else {
             System.out.printf("%s was added to the shopping cart.\n\n", newItem);
